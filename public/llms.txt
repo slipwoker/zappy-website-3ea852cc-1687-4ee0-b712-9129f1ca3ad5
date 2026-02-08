@@ -1,0 +1,53 @@
+# דיאנה אזולאי תקשור קבלי והכוונה רוחנית — Generative Engine Optimization Map
+
+> A רוחניות ופיתוח אישי business.
+
+---
+
+## Pages
+
+### Home
+https://-3ea852cc.zappy5.app
+
+### About
+https://-3ea852cc.zappy5.app/about
+
+### Offerings
+https://-3ea852cc.zappy5.app/offerings
+
+### Contact
+https://-3ea852cc.zappy5.app/contact
+
+## Legal & Policy
+
+### Privacy Policy
+https://-3ea852cc.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-3ea852cc.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-3ea852cc.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About דיאנה אזולאי תקשור קבלי והכוונה רוחנית
+דיאנה אזולאי תקשור קבלי והכוונה רוחנית is a business in the רוחניות ופיתוח אישי industry.
+
+## Target Audience
+נשים המחפשות ליווי רוחני עמוק
+
+## Industry
+רוחניות ופיתוח אישי
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-3ea852cc.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-3ea852cc.zappy5.app/robots.txt

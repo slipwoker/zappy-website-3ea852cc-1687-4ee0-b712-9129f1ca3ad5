@@ -1,0 +1,558 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דיאנה אזולאי תקשור קבלי והכוונה רוחנית | תקשור קבלי</title>
+  <meta name="description" content="Home - דיאנה אזולאי תקשור קבלי והכוונה רוחנית provides professional רוחניות ופיתוח אישי services. Specializing in תקשור קבלי.">
+  <meta name="keywords" content="תקשור קבלי, תקשור קבלי להכוונה רוחנית, מטפלת רוחנית לנשים, זיהוי חסימות רוחניות וטיפול">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="דיאנה אזולאי תקשור קבלי והכוונה רוחנית | תקשור קבלי">
+  <meta property="og:description" content="Home - דיאנה אזולאי תקשור קבלי והכוונה רוחנית provides professional רוחניות ופיתוח אישי services. Specializing in תקשור קבלי.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="דיאנה אזולאי תקשור קבלי והכוונה רוחנית | תקשור קבלי">
+  <meta name="twitter:description" content="Home - דיאנה אזולאי תקשור קבלי והכוונה רוחנית provides professional רוחניות ופיתוח אישי services. Specializing in תקשור קבלי.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '3ea852cc-1687-4ee0-b712-9129f1ca3ad5',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+</head>
+<body>
+  <nav class="navbar" dir="rtl">
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+  </button>
+  
+  <button class="phone-header-btn" aria-label="Call">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </button>
+  
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="/" class="logo-link">
+        <img src="/assets/business-logo.webp" alt="דיאנה אזולאי תקשור קבלי והכוונה רוחנית" class="logo" />
+      </a>
+    </div>
+    
+    <ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/offerings">שירותים</a></li></ul>
+    
+    <div class="nav-cta-container">
+      <a href="/contact" class="nav-cta-btn">צור קשר</a>
+    </div>
+  </div>
+</nav>
+  
+  <main>
+    <section class="home-hero-section" data-layout-spec="Home-Hero" data-hero-type="fullscreen-scrim">
+  <!-- Background Image -->
+  <img data-placeholder="home-hero-bg" data-context="Ethereal spiritual scene for Kabbalah communication and spiritual guidance: soft-focused woman in serene meditation or contemplative pose, surrounded by gentle luminous purple and gold light rays, dreamy bokeh effects, mystical atmosphere with subtle star-like sparkles, warm pearly-lilac color grading, magazine-quality editorial photography, soft focus background suggesting inner peace and transformation, feminine energy, spiritual awakening visual metaphor" class="home-hero-bg-image" width="1920" height="1080" src="/assets/site-home-hero-bg.webp" alt="רקע רוחני מואר - דיאנה אזולאי תקשור קבלי">
+  
+  <!-- Gradient Scrim Overlay -->
+  <div class="home-hero-scrim" aria-hidden="true"></div>
+  
+  <!-- Subtle Grain Texture Overlay -->
+  <div class="home-hero-grain" aria-hidden="true"></div>
+  
+  <!-- Content Overlay Group -->
+  <div class="home-hero-content">
+    <div class="home-hero-content-wrapper">
+      <h1 class="home-hero-headline">בואי לגלות את האור הפנימי שלך</h1>
+      <h3 class="home-hero-manifesto">מסע רוחני מעמיק שמוביל לשינוי אמיתי ומתמשך</h3>
+      <div class="home-hero-cta-row">
+        <a href="/contact" class="home-hero-btn home-hero-btn-primary">התחילי את השיחה</a>
+        <a href="/offerings" class="home-hero-btn home-hero-btn-secondary">גלי את השירותים</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-process-section" data-layout-spec="Home-process">
+  <div class="home-process-container">
+    <div class="home-process-grid">
+      <div class="home-process-content-column">
+        <h2 class="home-process-title">מסע ברור, צעד אחד עדין בכל פעם</h2>
+        <p class="home-process-intro">הגישה שלי משלבת חכמה קבלית עתיקה עם כלים מעשיים לשינוי אמיתי. אני מאמינה שכל אישה נושאת בתוכה אור פנימי עוצמתי, ותפקידי הוא לעזור לך להסיר את השכבות שמכסות אותו. זהו תהליך של התעוררות עדינה, לא מאבק.</p>
+        <p class="home-process-intro">דרך תקשור קבלי והכוונה רוחנית מותאמת אישית, אנחנו יוצרות יחד מרחב בטוח שבו את יכולה לחקור, לשחרר ולצמוח. כל שלב בדרך מכובד ומותאם לקצב שלך.</p>
+        
+        <div class="home-process-steps">
+          <div class="home-process-step">
+            <h3 class="home-process-step-title">מודעות</h3>
+            <p class="home-process-step-text">אנחנו מתחילות בזיהוי עדין של הדפוסים והחסימות הרוחניות שמונעות ממך להתקדם. זהו שלב של הקשבה עמוקה לנפש ולסימנים שהיא שולחת.</p>
+          </div>
+          
+          <div class="home-process-step">
+            <h3 class="home-process-step-title">שחרור</h3>
+            <p class="home-process-step-text">באמצעות תקשור קבלי, אנחנו משחררות אנרגיות ישנות ואמונות מגבילות שכבר לא משרתות אותך. זהו תהליך של הרפיה והתרה, לא של כפייה.</p>
+          </div>
+          
+          <div class="home-process-step">
+            <h3 class="home-process-step-title">התיישרות</h3>
+            <p class="home-process-step-text">כשהמרחב נפנה, אנחנו מתיישרות מחדש עם המהות האמיתית שלך ועם המטרה הרוחנית שלך. זהו שלב של התחברות מחודשת לאור הפנימי.</p>
+          </div>
+          
+          <div class="home-process-step">
+            <h3 class="home-process-step-title">אינטגרציה</h3>
+            <p class="home-process-step-text">השלב האחרון הוא שילוב התובנות והשינויים בחיי היומיום שלך. אני מלווה אותך בבניית כלים מעשיים לשמירה על האיזון והצמיחה הרוחנית.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="home-process-visual-column">
+        <svg class="home-process-path-map" data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 300 800" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#5A4A7A;stop-opacity:0.4"></stop>
+              <stop offset="100%" style="stop-color:#5A4A7A;stop-opacity:0.8"></stop>
+            </linearGradient>
+          </defs>
+          <path d="M150,40 Q120,100 140,160 T150,240 Q160,300 140,360 T150,440 Q130,500 150,560 T150,640 Q170,700 150,760" stroke="url(#pathGradient)" stroke-width="2" fill="none" stroke-linecap="round"></path>
+          <circle cx="150" cy="40" r="8" fill="var(--accent)" opacity="0.9"></circle>
+          <circle cx="150" cy="240" r="8" fill="var(--accent)" opacity="0.9"></circle>
+          <circle cx="150" cy="440" r="8" fill="var(--accent)" opacity="0.9"></circle>
+          <circle cx="150" cy="640" r="8" fill="var(--accent)" opacity="0.9"></circle>
+          <circle cx="150" cy="40" r="14" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"></circle>
+          <circle cx="150" cy="240" r="14" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"></circle>
+          <circle cx="150" cy="440" r="14" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"></circle>
+          <circle cx="150" cy="640" r="14" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"></circle>
+        </svg>
+        
+        <svg class="home-process-botanical" data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100,380 Q100,320 80,280 Q60,240 70,200 Q80,160 90,120 Q95,80 100,40" stroke="var(--text-muted)" stroke-width="1.5" fill="none" opacity="0.3"></path>
+          <path d="M100,300 Q130,290 140,270 Q150,250 135,230" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <path d="M100,300 Q70,290 60,270 Q50,250 65,230" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <path d="M100,220 Q125,215 135,200 Q145,185 132,170" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <path d="M100,220 Q75,215 65,200 Q55,185 68,170" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <path d="M100,140 Q120,135 128,122 Q136,109 126,95" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <path d="M100,140 Q80,135 72,122 Q64,109 74,95" stroke="var(--text-muted)" stroke-width="1" fill="none" opacity="0.25"></path>
+          <ellipse cx="135" cy="230" rx="8" ry="12" fill="var(--text-muted)" opacity="0.15"></ellipse>
+          <ellipse cx="65" cy="230" rx="8" ry="12" fill="var(--text-muted)" opacity="0.15"></ellipse>
+          <ellipse cx="132" cy="170" rx="7" ry="10" fill="var(--text-muted)" opacity="0.15"></ellipse>
+          <ellipse cx="68" cy="170" rx="7" ry="10" fill="var(--text-muted)" opacity="0.15"></ellipse>
+          <ellipse cx="126" cy="95" rx="6" ry="9" fill="var(--text-muted)" opacity="0.15"></ellipse>
+          <ellipse cx="74" cy="95" rx="6" ry="9" fill="var(--text-muted)" opacity="0.15"></ellipse>
+        </svg>
+      </div>
+    </div>
+    
+    <blockquote class="home-process-quote">
+      <p>"כשאת חוזרת אל האור הפנימי שלך, כל דבר בחיים מתחיל להתבהר. זה לא קסם — זו החזרה הביתה אל עצמך האמיתית."</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="home-testimonials-section" data-layout-spec="Home-testimonials">
+  <div class="home-testimonials-container">
+    <div class="home-testimonials-intro">
+      <h2>מילים של אנשים שבחרו בעבודה</h2>
+      <p>כל מסע רוחני הוא אישי ועמוק. הנה קולות של נשים שמצאו בליווי הקבלי שלי כלי לשינוי מעשי ומשמעותי בחייהן היומיומיים.</p>
+    </div>
+    <div class="home-testimonials-grid">
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"דיאנה הביאה אותי למקום של בהירות פנימית שלא הכרתי. הליווי הקבלי שלה עזר לי להבין את החסימות שלי ולהשתחרר מהן בעדינות. היום אני מרגישה יותר חזקה ומחוברת לעצמי."</p>
+        <p class="home-testimonials-attribution">שרה כהן, מעצבת גרפית</p>
+      </div>
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"העבודה עם דיאנה שינתה את הדרך שבה אני מסתכלת על החיים. התקשור הקבלי פתח לי דלתות להבנה עמוקה יותר של עצמי ושל המסע הרוחני שלי. אני ממליצה בחום לכל אישה שמחפשת צמיחה אמיתית."</p>
+        <p class="home-testimonials-attribution">מיכל לוי, מורה ליוגה</p>
+      </div>
+      <div class="home-testimonials-card">
+        <p class="home-testimonials-quote">"הליווי של דיאנה היה בשבילי מתנה אמיתית. היא עזרה לי לזהות דפוסים שחזרו על עצמם ולמצוא כלים מעשיים לשינוי. היום אני חיה עם יותר שלווה, בטחון עצמי ואמונה בדרך שלי."</p>
+        <p class="home-testimonials-attribution">רונית אברהם, יועצת עסקית</p>
+      </div>
+    </div>
+  </div>
+  <div class="home-testimonials-glow"></div>
+</section>
+
+<section class="home-gallery-section" data-layout-spec="Home-gallery">
+  <div class="home-gallery-container">
+    <div class="home-gallery-header">
+      <h2>תובנות קצרות לימים אמיתיים</h2>
+      <p class="home-gallery-intro">הזמנה לרגע של השתקפות. חזרו אלינו מתי שתרצו להיזכר במה שחשוב באמת.</p>
+    </div>
+    
+    <div class="home-gallery-grid">
+      <article class="home-gallery-card">
+        <h3>נוכחות</h3>
+        <p>להיות כאן, עכשיו, בלי לחשוב על אתמול או מחר. הרגע הזה הוא המתנה היחידה שיש לנו באמת.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+      
+      <article class="home-gallery-card">
+        <h3>גבולות</h3>
+        <p>לומר "לא" זה לא אנוכיות. זה לשמור על האנרגיה שלנו למה שבאמת חשוב לנו ולמי שאנחנו.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+      
+      <article class="home-gallery-card">
+        <h3>אינטואיציה</h3>
+        <p>הקול השקט בפנים יודע. לפעמים צריך רק להאט, להקשיב, ולתת לו מקום לדבר אלינו.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+      
+      <article class="home-gallery-card">
+        <h3>חמלה</h3>
+        <p>כשאנחנו נותנים לעצמנו חמלה, אנחנו מגלים שיש לנו יותר לתת לאחרים. זה מתחיל מבפנים.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+      
+      <article class="home-gallery-card">
+        <h3>לשחרר</h3>
+        <p>לא הכל שלנו לשאת. יש דברים שצריך להניח בצד, לא מתוך כניעה אלא מתוך חוכמה.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+      
+      <article class="home-gallery-card">
+        <h3>מטרה</h3>
+        <p>המטרה שלנו לא תמיד ברורה, אבל כל צעד קטן בכיוון הנכון מקרב אותנו אליה.</p>
+        <a href="#" class="home-gallery-link">המשיכו לקרוא</a>
+      </article>
+    </div>
+  </div>
+  
+  <div class="home-gallery-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 L0,45 Q100,38 200,45 T400,42 Q500,48 600,40 T800,45 Q900,38 1000,42 T1200,45 L1200,80 Z" fill="var(--bg-dark)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="home-cta-section" data-layout-spec="Home-cta">
+  <div class="home-cta-section__container">
+    <div class="home-cta-section__accent-line" aria-hidden="true"></div>
+    <div class="home-cta-section__content">
+      <h2 class="home-cta-section__heading">מוכנה להתחיל במסע של בהירות?</h2>
+      <p class="home-cta-section__intro">שלחי לי הודעה קצרה ונתחיל יחד את המסע לעומק הנשמה שלך. כל שיחה מתחילה במרחב בטוח ומכיל.</p>
+      <a href="/contact" class="home-cta-section__cta-button btn-primary">צרי קשר עכשיו</a>
+      <p class="home-cta-section__reassurance">אחזור אליך תוך 24 שעות. השיחה הראשונה היא צעד עדין ומכבד לקראת השינוי שאת מחפשת.</p>
+    </div>
+  </div>
+</section>
+  </main>
+  
+  <footer class="site-footer"><div class="footer-container"><div class="footer-grid"><div class="footer-section footer-about"><img src="/assets/business-logo.webp" alt="דיאנה אזולאי תקשור קבלי והכוונה רוחנית" class="logo" /><p class="footer-description">מלווה אותך במסע הרוחני שלך דרך תקשור קבלי והכוונה אישית עמוקה</p><div class="social-links"><a href="[facebook_handle]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="[instagram_handle]" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="[whatsapp_handle]" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-section footer-links"><h3>קישורים מהירים</h3><ul><li><a href="/about">אודות</a></li><li><a href="/offerings">שירותים</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section footer-contact"><h3>יצירת קשר</h3><ul class="contact-list"><li><i class="fas fa-envelope"></i><a href="mailto:[business_email]">[business_email]</a></li><li><i class="fas fa-phone"></i><a href="tel:[business_phone]">[business_phone]</a></li><li><a href="/"><i class="fas fa-map-marker-alt"></i><span>[business_address]</span></a></li></ul></div></div><div class="footer-bottom"><div class="footer-bottom-content"><div class="legal-links"><a href="/privacy">מדיניות פרטיות</a><span class="separator">|</span><a href="/terms">תנאים והגבלות</a><span class="separator">|</span><a href="/accessibility">הצהרת נגישות</a></div><p class="copyright">© 2026 דיאנה אזולאי תקשור קבלי והכוונה רוחנית. כל הזכויות שמורות.</p><a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a></div></div></div></footer>
+  
+  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <script src="/script.js"></script>
+
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+</body></html>
