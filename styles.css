@@ -5477,6 +5477,275 @@ small, .small-text {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (Home-process)
+   Added: 2026-02-21T17:29:31.689Z
+   ═══════════════════════════════════════════════════════════ */
+.home-process-section {
+  position: relative;
+  background: linear-gradient(180deg, #F7F3FF 0%, #F0E8FF 100%);
+  padding: 120px 16px 80px;
+  overflow: visible;
+  color: var(--text-dark);
+}
+
+.home-process-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(42, 27, 74, 0.015) 2px, rgba(42, 27, 74, 0.015) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(42, 27, 74, 0.015) 2px, rgba(42, 27, 74, 0.015) 4px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-process-section .home-process-texture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /%3E%3C/filter%3E%3Crect width="100" height="100" filter="url(%23noise)" opacity="0.03"/%3E%3C/svg%3E');
+  pointer-events: none;
+  z-index: 1;
+}
+
+.home-process-section .home-process-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.home-process-section .home-process-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.home-process-section .home-process-content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.home-process-section .home-process-intro h2 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.home-process-section .home-process-intro p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.home-process-section .home-process-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.home-process-section .home-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-process-section .home-process-step {
+  position: relative;
+  padding-inline-start: 0;
+}
+
+.home-process-section .home-process-step-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.home-process-section .home-process-step-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.home-process-section .home-process-step-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.home-process-section .home-process-step h3 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--primary);
+  margin: 0;
+}
+
+.home-process-section .home-process-step p {
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.home-process-section .home-process-visual-column {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.home-process-section .home-process-path-map {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+.home-process-section .home-process-node {
+  transition: transform 0.3s ease;
+}
+
+.home-process-section .home-process-botanical-ornament {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(120px);
+  width: 180px;
+  height: 280px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.home-process-section .home-process-botanical-ornament svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.home-process-section .home-process-pullquote {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(42, 27, 74, 0.08);
+}
+
+.home-process-section .home-process-pullquote-mark {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  color: var(--accent);
+  opacity: 0.4;
+}
+
+.home-process-section .home-process-pullquote-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.home-process-section .home-process-pullquote p {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--primary);
+  font-style: italic;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .home-process-section {
+    padding: 100px 16px 60px;
+  }
+  
+  .home-process-section .home-process-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  
+  .home-process-section .home-process-content-column {
+    gap: 32px;
+  }
+  
+  .home-process-section .home-process-intro h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  
+  .home-process-section .home-process-steps {
+    gap: 32px;
+  }
+  
+  .home-process-section .home-process-step-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .home-process-section .home-process-step-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .home-process-section .home-process-step h3 {
+    font-size: 20px;
+  }
+  
+  .home-process-section .home-process-visual-column {
+    min-height: 400px;
+    order: -1;
+  }
+  
+  .home-process-section .home-process-path-map {
+    max-width: 120px;
+  }
+  
+  .home-process-section .home-process-botanical-ornament {
+    transform: translate(-50%, -50%) translateX(80px) scale(0.7);
+  }
+  
+  .home-process-section .home-process-pullquote {
+    padding: 32px 24px;
+  }
+  
+  .home-process-section .home-process-pullquote-mark {
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    right: 16px;
+  }
+  
+  .home-process-section .home-process-pullquote p {
+    font-size: 18px;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
